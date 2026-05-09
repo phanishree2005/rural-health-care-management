@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.medical-gradient {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Global Dark Mode Overrides */
+html.dark body,
+html.dark .bg-\[\#f3f4f6\] {
+  background-color: #0f172a !important; /* Deep dark slate */
+  color: #f8fafc !important;
+}
+
+/* Glassmorphism Dark Theme Overrides */
+html.dark .bg-white\/60,
+html.dark .bg-white\/70,
+html.dark .bg-white\/80,
+html.dark .bg-white\/90,
+html.dark .bg-white {
+  background-color: rgba(30, 41, 59, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Text Overrides */
+html.dark .text-slate-800,
+html.dark .text-slate-700 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+/* Container Overrides */
+html.dark .bg-slate-50,
+html.dark .bg-slate-100 {
+  background-color: rgba(15, 23, 42, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+html.dark .border-slate-100,
+html.dark .border-slate-200 {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Table Overrides */
+html.dark .divide-slate-50,
+html.dark .divide-slate-100\/50 {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Dim the animated blobs in dark mode to keep it premium */
+html.dark .animate-blob {
+  opacity: 0.15 !important;
+  mix-blend-mode: screen;
+}
